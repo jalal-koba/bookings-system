@@ -19,7 +19,6 @@ public class DataInitializer {
 
         return args -> {
 
-            // تحقق إذا كان الأدمن موجود مسبقًا
             if (userRepository.findByEmail("admin@admin.com").isPresent()) {
                 return;
             }
@@ -32,7 +31,7 @@ public class DataInitializer {
 
             userRepository.save(admin);
 
-            System.out.println("✅ Admin user created: admin@admin.com");
+            System.out.println(" Admin user created: admin@admin.com");
         };
     }
 }
